@@ -7,32 +7,41 @@
     <title>Document</title>
     <script src="./scripts/script.js" defer></script>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div id="buttonContainer">
-        <div id="preselectedColorsButtons">
-            <button>Black</button>
-            <button>White</button>
-            <button>Random color</button>
-        </div>
-        <div id="centralButtons">
-            <div id="pickingColors">
-                <div>Brush color<input type="color"></div>
-                <div>Background color<input type="color"></div>
+<body class="column">
+    <div class="content column">
+        <h1>Etch-a-Sketch</h1>
+        <div id="buttonContainer">
+            <div id="preselectedColorsButtons" class="column">
+                <button id="black" class="activeButton">Black</button>
+                <button id="white">White</button>
+                <button id="randomColor">Random color</button>
             </div>
-            <div id="sizeSelection">
-                <button>16 x 16</button>
-                <button>32 x 32</button>
-                <button>64 x 64</button>
+            <div id="centralButtons" class="column">
+                <div id="pickingColors" >
+                    <div><input type="color" value="#000000" id="brushColorInput"><span>Brush <br>color</span></div>
+                    <div><input type="color" value="#ffffff" id="backgroundColorInput"> Background <br>  color</div>
+                </div>
+                <div id="sizeSelection">
+                    <button id="size8">8 x 8</button>
+                    <button id="size16" class="activeButton">16 x 16</button>
+                    <button id="size32">32 x 32</button>
+                </div>
+            </div>
+            <div id="hidingButtons" class="column">
+                <button id="eraser">Eraser</button>
+                <button id="toggleBorder">Hide borders</button>
+                <button id="clear">Clear</button>
             </div>
         </div>
-        <div id="hidingButtons">
-            <button>Clear</button>
-            <button>Eraser</button>
-            <button>Hide square border</button>
+        <div id="gridContainer">
         </div>
     </div>
-    <div id="gridContainer">
-    </div>
+    <footer>
+        Made by nklpsl
+    </footer>
 </body>
 </html>

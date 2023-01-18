@@ -1,19 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	border: 2px solid black;
+	width: 50px;
+	height: 50px;
+    border-radius: 10%;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(81, 128, 128);
+    border: 2px solid black;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(41, 67, 67);
+    border: 2px solid white;
+}
+
+.activeButton {
+    background-color: rgb(31, 29, 26);
+}
+
+#sizeSelection > button {
+    width: 70px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    background-color: #222222;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+h1 {
+    padding-top: 30px;
+    font-weight: 800;
+    font-size: 3rem;
+    color: white;
+}
+
+#buttonContainer {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+}
+
+#preselectedColorsButtons,
+#hidingButtons {
+    gap: 10px;
+}
+
+#centralButtons {
+    gap: 10px;
+    justify-content: space-around;
+}
+
+#pickingColors,
+#sizeSelection {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#pickingColors > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
 #gridContainer {
     display: grid;
-    max-width: 700px;
-    margin: 100px 100px auto auto;
-    padding: 10px;
+    width: 600px;
+    height: 600px;
+    border: 4px solid black;
     background-color: gray;
     gap: 1px;
 }
 
 #gridContainer > div {
-    background-color: aqua;
-    padding: 20px;
+    width: 1fr;
     aspect-ratio: 1;
 }
 
-#gridContainer > div:hover {
-    background-color: rgb(1, 199, 199);
-    padding: 20px;
+footer {
+    padding: 10px 0px;
+    background-color: #0c0909;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
 }
